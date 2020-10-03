@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Gossip</string>
+    <string name="FCM_notification_channel_id">FCM notification channel id</string>
+    <string name="FCM_message">FCM message</string>
+</resources>
