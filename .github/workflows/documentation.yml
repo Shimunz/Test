@@ -33,14 +33,7 @@ jobs:
       
     - name: Generate Documentation
       run: ./gradlew dokkaHtml
-      
-    - name: Commit
-      run: |
-        git config --local user.name "Shimunz"  
-        git config --local user.email "simonzhao@outlook.com"
-        git add.
-        git commit -m "Updated documentation"
-    
+          
     - name: Deploy API documentation to Github Pages
       uses: JamesIves/github-pages-deploy-action@3.5.9
       with:
