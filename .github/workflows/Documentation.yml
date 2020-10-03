@@ -1,0 +1,34 @@
+name: Documentation
+
+on:
+  #push:
+   # branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clone Repo 
+      uses: actions/checkout@v2
+      
+    - name: Generate Documentation
+      uses: ./gradlew dokkaGfm
+          
+    - name: Commit
+      run: |
+        git config --local user.name "Shimunz"  
+        git config --local user.email "simonzhao@outlook.com"
+        git add.
+        git commit -m "Updated documentation"
+    
+    - name: Wiki code
+      uses: ad-m/github-push-action@master
+      with: 
+        repository: ${{github.repository}}.wiki
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        
+    
