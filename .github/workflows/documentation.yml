@@ -32,7 +32,7 @@ jobs:
       run: ./gradlew build
       
     - name: Generate Documentation
-      uses: ./gradlew dokkaGfm
+      run: ./gradlew dokkaHtml
       
     - name: Commit
       run: |
