@@ -42,4 +42,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
         FOLDER: build/dokka/html
-        CLEAN: true # Automatically remove deleted files from the deploy branch
+       # CLEAN: true # Automatically remove deleted files from the deploy branch
