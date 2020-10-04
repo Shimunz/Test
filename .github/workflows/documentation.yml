@@ -34,7 +34,7 @@ jobs:
       run: ./gradlew build
       
     - name: Generate Documentation
-      run: ./gradlew dokkaHtml
+      run: ./gradlew dokka
     
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@3.6.2
