@@ -33,16 +33,11 @@ jobs:
       
     - name: Generate Documentation
       run: ./gradlew dokkaGfm
-          
-    - name: Commit
-      run: |
-        git config --local user.name "Shimunz"  
-        git config --local user.email "simonzhao@outlook.com"
-        git add .
-        git commit -m "Updated documentation"
     
-    - name: Wiki code
-      uses: ad-m/github-push-action@master
-      with: 
-        repository: ${{github.repository}}.wiki
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@3.6.2
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: app/build/dokka/html # The folder the action should deploy.
+        CLEAN: true # Automatically remove deleted files from the deploy branch
