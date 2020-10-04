@@ -6,7 +6,7 @@
 
 
 ## Docs
-Currently located in: [Here](https://github.com/Shimunz/COSC345/blob/master/app/Documentation/app/index.md)
+Currently located in: [Here]https://shimunz.github.io/Test/)
 Uploading to wiki is WIP
 
 ## Testing accounts
